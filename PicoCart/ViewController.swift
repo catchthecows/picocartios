@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         view.addSubview(buffer)
         view.layoutSubviews()
         
-        Timer.scheduledTimer(withTimeInterval:  1.0/60.0, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval:  1/60.0, repeats: true) { timer in
             self.redraw()           
         }
 

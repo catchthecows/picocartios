@@ -37,7 +37,7 @@ class ScreenBufferView: UIView {
     
     private func initPico() {
         initPalette()
-        cart_init()
+        cart6_init()
     }
     
     private func initPalette() {
@@ -188,8 +188,14 @@ class ScreenBufferView: UIView {
             context.setStrokeColor(_get_color(color: color).cgColor)
             let rect = CGRect(x: x-r, y: y-r, width: r*2, height: r*2)
             context.strokeEllipse(in: rect)
-            
-            
+        }
+    }
+    
+    func pico_circfill(x:Double,y:Double,r:Double,color:Int) {
+        if let context = UIGraphicsGetCurrentContext() {
+            context.setFillColor(_get_color(color: color).cgColor)
+            let rect = CGRect(x: x-r, y: y-r, width: r*2, height: r*2)
+            context.fillEllipse(in: rect)
         }
     }
     
@@ -229,14 +235,83 @@ class ScreenBufferView: UIView {
         }
     }
     
-    func pico_rnd(_ v : Double)->Double {
+    func pico_rnd(_ v : Double = 1.0)->Double {
         return Double.random(in: 0..<v)
     }
     
     override func draw(_ rect: CGRect) {
         _t += 1.0/60.0
-        cart1()
+        cart6_draw()
     }
+    
+    
+    /*
+     f=128
+     l={}
+     r=rnd
+     for i=1,80do
+         add(l,{a=r(),c=i%15+1,s=r(15),x=r(f),y=r(f)})
+     end
+     ::_::
+     cls()
+     for c in all(l)do
+         c.a+=r(.2)-.1
+         s=c.s
+         c.x=c.x%f+cos(c.a)
+         c.y=c.y%f+sin(c.a)
+         circfill(c.x,c.y,s^0.5,c.c)
+         for d in all(l)do
+             if(d.s<s and(c.x-d.x)^2+(c.y-d.y)^2<s)
+                 del(l,d)
+                 c.s+=d.s
+         end
+     end
+     flip()goto _
+     */
+    let f = 256.0
+    struct ball {
+        var a : Double
+        var c : Int
+        var s : Double
+        var x : Double
+        var y : Double
+        var dead : Bool
+    }
+    var l = [ball]()
+    func cart6_init() {
+        pico_for(start: 1, end: 80, step: 1) { i in
+            l.append( ball(a: pico_rnd(), c: Int(i)%15+1, s: (pico_rnd(5)+1) * 5, x: pico_rnd(f), y: pico_rnd(f), dead: false) )
+        }
+    }
+    
+    func cart6_draw() {
+        pico_cls()
+
+        for (index,value) in l.enumerated() {
+            if (value.dead == false) {
+                l[index].a += pico_rnd(0.2)-0.1
+                let s = value.s
+                let x = min(max(0,value.x + pico_cos(value.a)),f)
+                let y = min(max(0,value.y + pico_sin(value.a)),f)
+                l[index].x = x
+                l[index].y = y
+                pico_circfill(x: x, y: y, r: s, color: value.c)
+                
+                for (i,b) in l.enumerated() {
+                    if (b.dead == false && index != i) {
+                        let ydist = (y-b.y)*(y-b.y)
+                        let xdist = (x-b.x)*(x-b.x)
+                        let dist = sqrt(xdist+ydist)
+                        if(b.s<s && dist < s) {
+                            l[index].s += 2
+                            l[i].dead = true
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     
     
     /*
