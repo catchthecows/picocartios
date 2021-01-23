@@ -16,6 +16,17 @@
 		9525AAE8259E660D000B7A3B /* PicoCartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9525AAE7259E660D000B7A3B /* PicoCartTests.swift */; };
 		9525AAF3259E660D000B7A3B /* PicoCartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9525AAF2259E660D000B7A3B /* PicoCartUITests.swift */; };
 		9525AB04259E66A9000B7A3B /* ScreenBufferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9525AB03259E66A9000B7A3B /* ScreenBufferView.swift */; };
+		D286D62325BCA08D00AC31EE /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D62225BCA08D00AC31EE /* UIColorExtensions.swift */; };
+		D286D62A25BCAD8100AC31EE /* PicoRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D62825BCAD8100AC31EE /* PicoRender.swift */; };
+		D286D62B25BCAD8100AC31EE /* PicoRenderCG.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D62925BCAD8100AC31EE /* PicoRenderCG.swift */; };
+		D286D63225BCB3F800AC31EE /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D63125BCB3F800AC31EE /* Cart.swift */; };
+		D286D63F25BCB57800AC31EE /* Cart1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D63E25BCB57800AC31EE /* Cart1.swift */; };
+		D286D64425BCB6C700AC31EE /* Cart2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D64325BCB6C700AC31EE /* Cart2.swift */; };
+		D286D64925BCCD9F00AC31EE /* Cart3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D64825BCCD9F00AC31EE /* Cart3.swift */; };
+		D286D64E25BCCE3F00AC31EE /* Cart4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D64D25BCCE3F00AC31EE /* Cart4.swift */; };
+		D286D65325BCCEC800AC31EE /* Cart5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D65225BCCEC800AC31EE /* Cart5.swift */; };
+		D286D65825BCCF1400AC31EE /* Cart6.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D65725BCCF1400AC31EE /* Cart6.swift */; };
+		D286D65D25BCCFBA00AC31EE /* Cart7.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D65C25BCCFBA00AC31EE /* Cart7.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +62,17 @@
 		9525AAF2259E660D000B7A3B /* PicoCartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicoCartUITests.swift; sourceTree = "<group>"; };
 		9525AAF4259E660D000B7A3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9525AB03259E66A9000B7A3B /* ScreenBufferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBufferView.swift; sourceTree = "<group>"; };
+		D286D62225BCA08D00AC31EE /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		D286D62825BCAD8100AC31EE /* PicoRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicoRender.swift; sourceTree = "<group>"; };
+		D286D62925BCAD8100AC31EE /* PicoRenderCG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicoRenderCG.swift; sourceTree = "<group>"; };
+		D286D63125BCB3F800AC31EE /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		D286D63E25BCB57800AC31EE /* Cart1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart1.swift; sourceTree = "<group>"; };
+		D286D64325BCB6C700AC31EE /* Cart2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart2.swift; sourceTree = "<group>"; };
+		D286D64825BCCD9F00AC31EE /* Cart3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart3.swift; sourceTree = "<group>"; };
+		D286D64D25BCCE3F00AC31EE /* Cart4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart4.swift; sourceTree = "<group>"; };
+		D286D65225BCCEC800AC31EE /* Cart5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart5.swift; sourceTree = "<group>"; };
+		D286D65725BCCF1400AC31EE /* Cart6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart6.swift; sourceTree = "<group>"; };
+		D286D65C25BCCFBA00AC31EE /* Cart7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart7.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +123,9 @@
 		9525AACF259E660B000B7A3B /* PicoCart */ = {
 			isa = PBXGroup;
 			children = (
+				D286D63025BCB3F800AC31EE /* cart */,
+				D286D62725BCAD8100AC31EE /* pico8 */,
+				D286D62125BCA06600AC31EE /* extensions */,
 				9525AAD0259E660B000B7A3B /* AppDelegate.swift */,
 				9525AAD2259E660B000B7A3B /* SceneDelegate.swift */,
 				9525AAD4259E660B000B7A3B /* ViewController.swift */,
@@ -129,6 +154,38 @@
 				9525AAF4259E660D000B7A3B /* Info.plist */,
 			);
 			path = PicoCartUITests;
+			sourceTree = "<group>";
+		};
+		D286D62125BCA06600AC31EE /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D286D62225BCA08D00AC31EE /* UIColorExtensions.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		D286D62725BCAD8100AC31EE /* pico8 */ = {
+			isa = PBXGroup;
+			children = (
+				D286D62825BCAD8100AC31EE /* PicoRender.swift */,
+				D286D62925BCAD8100AC31EE /* PicoRenderCG.swift */,
+			);
+			path = pico8;
+			sourceTree = "<group>";
+		};
+		D286D63025BCB3F800AC31EE /* cart */ = {
+			isa = PBXGroup;
+			children = (
+				D286D63E25BCB57800AC31EE /* Cart1.swift */,
+				D286D63125BCB3F800AC31EE /* Cart.swift */,
+				D286D64325BCB6C700AC31EE /* Cart2.swift */,
+				D286D64825BCCD9F00AC31EE /* Cart3.swift */,
+				D286D64D25BCCE3F00AC31EE /* Cart4.swift */,
+				D286D65225BCCEC800AC31EE /* Cart5.swift */,
+				D286D65725BCCF1400AC31EE /* Cart6.swift */,
+				D286D65C25BCCFBA00AC31EE /* Cart7.swift */,
+			);
+			path = cart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +318,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D286D65325BCCEC800AC31EE /* Cart5.swift in Sources */,
+				D286D64E25BCCE3F00AC31EE /* Cart4.swift in Sources */,
+				D286D64425BCB6C700AC31EE /* Cart2.swift in Sources */,
+				D286D62B25BCAD8100AC31EE /* PicoRenderCG.swift in Sources */,
 				9525AAD5259E660B000B7A3B /* ViewController.swift in Sources */,
 				9525AAD1259E660B000B7A3B /* AppDelegate.swift in Sources */,
+				D286D64925BCCD9F00AC31EE /* Cart3.swift in Sources */,
+				D286D63F25BCB57800AC31EE /* Cart1.swift in Sources */,
 				9525AB04259E66A9000B7A3B /* ScreenBufferView.swift in Sources */,
 				9525AAD3259E660B000B7A3B /* SceneDelegate.swift in Sources */,
+				D286D65825BCCF1400AC31EE /* Cart6.swift in Sources */,
+				D286D62A25BCAD8100AC31EE /* PicoRender.swift in Sources */,
+				D286D62325BCA08D00AC31EE /* UIColorExtensions.swift in Sources */,
+				D286D63225BCB3F800AC31EE /* Cart.swift in Sources */,
+				D286D65D25BCCFBA00AC31EE /* Cart7.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
