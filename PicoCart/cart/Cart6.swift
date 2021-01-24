@@ -34,17 +34,17 @@ class Cart6 : Cart {
     
     override func draw() {
         pico.cls(0)
-        let b = 64.0
-        let d = 128.0+64*pico.cos(pico.t()/4)
-        let e = 128.0-64*pico.sin(pico.t()/4)
-        pico.forloop(start: -10, end: 266, step: 5) { i in
-            pico.forloop(start: -10, end: 266, step: 5) { j in
+        let b = 32.0
+        let d = 64.0+32*pico.cos(pico.t()/4)
+        let e = 64.0-32*pico.sin(pico.t()/4)
+        pico.forloop(start: -10, end: 138, step: 5) { i in
+            pico.forloop(start: -10, end: 138, step: 5) { j in
                 let aa = (i - d) * (i - d)
                 let bb = (j - e) * (j - e)
                 let cc = (aa+bb).squareRoot()
                 let c = 5.0 - (cc/b)
-                let u = i+5*pico.cos(pico.t()+j/128+i/128)
-                let v = j+5*pico.sin(pico.t()-128+i/256+j/0.1)
+                let u = i+5*pico.cos(pico.t()+j/64+i/64)
+                let v = j+5*pico.sin(pico.t()-64+i/128+j/0.1)
                 pico.pset(x: u, y: v, color: Int(c))
             }
         }

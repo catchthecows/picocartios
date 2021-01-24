@@ -1,7 +1,7 @@
 
 class Cart {
-    private(set) var pico : PicoRender
-    init(_ pico: PicoRender) {
+    private(set) var pico : PicoRender!
+    func load(_ pico: PicoRender) {
         self.pico = pico
     }
     func initCart() {

@@ -24,13 +24,11 @@ class ScreenBufferView: UIView {
     
     private func initPico() {
         pico = PicoRenderCG()
-        cart = Cart6(pico)
-        cart.initCart()
+        pico.loadCart(Cart8())
     }
     
     override func draw(_ rect: CGRect) {
         pico.tick()
-        cart.draw()
     }
 
 }

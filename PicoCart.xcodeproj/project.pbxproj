@@ -27,6 +27,8 @@
 		D286D65325BCCEC800AC31EE /* Cart5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D65225BCCEC800AC31EE /* Cart5.swift */; };
 		D286D65825BCCF1400AC31EE /* Cart6.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D65725BCCF1400AC31EE /* Cart6.swift */; };
 		D286D65D25BCCFBA00AC31EE /* Cart7.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D65C25BCCFBA00AC31EE /* Cart7.swift */; };
+		D286D66225BCD1BC00AC31EE /* PicoRenderPgetPset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D66125BCD1BC00AC31EE /* PicoRenderPgetPset.swift */; };
+		D286D66725BD20CE00AC31EE /* Cart8.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D66625BD20CE00AC31EE /* Cart8.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		D286D65225BCCEC800AC31EE /* Cart5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart5.swift; sourceTree = "<group>"; };
 		D286D65725BCCF1400AC31EE /* Cart6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart6.swift; sourceTree = "<group>"; };
 		D286D65C25BCCFBA00AC31EE /* Cart7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart7.swift; sourceTree = "<group>"; };
+		D286D66125BCD1BC00AC31EE /* PicoRenderPgetPset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicoRenderPgetPset.swift; sourceTree = "<group>"; };
+		D286D66625BD20CE00AC31EE /* Cart8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart8.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,7 @@
 			children = (
 				D286D62825BCAD8100AC31EE /* PicoRender.swift */,
 				D286D62925BCAD8100AC31EE /* PicoRenderCG.swift */,
+				D286D66125BCD1BC00AC31EE /* PicoRenderPgetPset.swift */,
 			);
 			path = pico8;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				D286D65225BCCEC800AC31EE /* Cart5.swift */,
 				D286D65725BCCF1400AC31EE /* Cart6.swift */,
 				D286D65C25BCCFBA00AC31EE /* Cart7.swift */,
+				D286D66625BD20CE00AC31EE /* Cart8.swift */,
 			);
 			path = cart;
 			sourceTree = "<group>";
@@ -328,10 +334,12 @@
 				D286D63F25BCB57800AC31EE /* Cart1.swift in Sources */,
 				9525AB04259E66A9000B7A3B /* ScreenBufferView.swift in Sources */,
 				9525AAD3259E660B000B7A3B /* SceneDelegate.swift in Sources */,
+				D286D66225BCD1BC00AC31EE /* PicoRenderPgetPset.swift in Sources */,
 				D286D65825BCCF1400AC31EE /* Cart6.swift in Sources */,
 				D286D62A25BCAD8100AC31EE /* PicoRender.swift in Sources */,
 				D286D62325BCA08D00AC31EE /* UIColorExtensions.swift in Sources */,
 				D286D63225BCB3F800AC31EE /* Cart.swift in Sources */,
+				D286D66725BD20CE00AC31EE /* Cart8.swift in Sources */,
 				D286D65D25BCCFBA00AC31EE /* Cart7.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,8 +1,13 @@
 
 protocol PicoRender {
+    func loadCart(_ cart:Cart)
+    
     func forloop(start:Double, end:Double, step:Double, loop:(Double)->())
+    
     func tick()
+    
     func t()->Double
+    
     func sin(_ a: Double)->Double
     
     func cos(_ a: Double)->Double
@@ -20,6 +25,8 @@ protocol PicoRender {
     func rectfill(x1:Double, y1:Double, x2:Double, y2:Double, color:Int)
     
     func rect(x1:Double, y1:Double, x2:Double, y2:Double, color:Int)
+    
+    func pget(x:Double, y:Double)->Int
     
     func pset(x:Double, y:Double, color:Int)
     

@@ -2,9 +2,15 @@ import UIKit
 import CoreGraphics
 
 class PicoRenderCG : PicoRender {
+    private(set) var cart: Cart?
     
     init() {
         initPico()
+    }
+    
+    func loadCart(_ cart: Cart) {
+        self.cart = cart
+        cart.load(self)
     }
     
     private func initPico() {
@@ -121,7 +127,9 @@ class PicoRenderCG : PicoRender {
     var _t : Double = 0.0
     func tick() {
         _t += 1.0/60.0
+        cart?.draw()
     }
+    
     func t()->Double {
         return _t
     }
@@ -184,6 +192,10 @@ class PicoRenderCG : PicoRender {
             context.setStrokeColor(_get_color(color: Int(color)).cgColor)
             context.strokePath()
         }
+    }
+    
+    func pget(x:Double, y:Double)->Int {
+        return 0
     }
     
     func pset(x:Double, y:Double, color:Int) {
