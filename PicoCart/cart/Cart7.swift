@@ -57,7 +57,7 @@ import Foundation
  */
 
 class Cart7 : Cart {
-    let colors = [-15,-15,1,-4,12,6,7]
+    let colors = [0,-15,1,-4,12,6,7]
     
     private func invertsin(_ a :Double)->Double {
         return 0 - pico.sin(a)
@@ -68,11 +68,9 @@ class Cart7 : Cart {
         var r = 0.0
         var g = 0.0
         var h = 0.0
-        let p = 9 * 4 * pico.cos(m)
+        let p = 9 + 4 * pico.cos(m)
         pico.forloop(start: 0, end: 1, step: 0.02) { b in
-            let pi = pico.flr((b*7)/1)
-            //let pi2 = pico.flr(b*7)
-            //print ("pi \(pi) pi2 \(pi2)")
+            let pi = pico.flr(b*7)
             pico.pal(index: Int(b*16), color: colors[Int(pi)], palette: 1)
             g += 0.004+pico.cos(b-m)*b/69
             r += pico.cos(g)

@@ -30,6 +30,7 @@
 		D286D66225BCD1BC00AC31EE /* PicoRenderPgetPset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D66125BCD1BC00AC31EE /* PicoRenderPgetPset.swift */; };
 		D286D66725BD20CE00AC31EE /* Cart8.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D66625BD20CE00AC31EE /* Cart8.swift */; };
 		D286D66C25BD2B4C00AC31EE /* Cart9.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D66B25BD2B4C00AC31EE /* Cart9.swift */; };
+		D286D67125BE146500AC31EE /* Cart10.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D67025BE146500AC31EE /* Cart10.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		D286D66125BCD1BC00AC31EE /* PicoRenderPgetPset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicoRenderPgetPset.swift; sourceTree = "<group>"; };
 		D286D66625BD20CE00AC31EE /* Cart8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart8.swift; sourceTree = "<group>"; };
 		D286D66B25BD2B4C00AC31EE /* Cart9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart9.swift; sourceTree = "<group>"; };
+		D286D67025BE146500AC31EE /* Cart10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart10.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				D286D65C25BCCFBA00AC31EE /* Cart7.swift */,
 				D286D66625BD20CE00AC31EE /* Cart8.swift */,
 				D286D66B25BD2B4C00AC31EE /* Cart9.swift */,
+				D286D67025BE146500AC31EE /* Cart10.swift */,
 			);
 			path = cart;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				9525AAD5259E660B000B7A3B /* ViewController.swift in Sources */,
 				9525AAD1259E660B000B7A3B /* AppDelegate.swift in Sources */,
 				D286D64925BCCD9F00AC31EE /* Cart3.swift in Sources */,
+				D286D67125BE146500AC31EE /* Cart10.swift in Sources */,
 				D286D63F25BCB57800AC31EE /* Cart1.swift in Sources */,
 				9525AB04259E66A9000B7A3B /* ScreenBufferView.swift in Sources */,
 				9525AAD3259E660B000B7A3B /* SceneDelegate.swift in Sources */,

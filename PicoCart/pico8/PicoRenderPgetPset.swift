@@ -15,14 +15,16 @@ class PicoRenderPgetPset : PicoRenderCG {
         super.tick()
         for row in 0 ..< PicoRenderPgetPset.SCREEN_SIZE {
             for col in 0 ..< PicoRenderPgetPset.SCREEN_SIZE {
-                super.pset(x: Double(col), y: Double(row), color: screen[row*PicoRenderPgetPset.SCREEN_SIZE + col])
+                let x = Double(col*2)
+                let y = Double(row*2)
+                rectfill(x1: x, y1: y, x2: x+2.0, y2: y+2.0, color: screen[row*PicoRenderPgetPset.SCREEN_SIZE + col])
+                //super.pset(x: Double(col), y: Double(row), color: screen[row*PicoRenderPgetPset.SCREEN_SIZE + col])
             }
         }
     }
     
     override
     func cls(_ color: Int = 0) {
-        super.cls(color)
         for i in 0 ..< PicoRenderPgetPset.SCREEN_SIZE*PicoRenderPgetPset.SCREEN_SIZE {
             screen[i]=color
         }
@@ -43,7 +45,6 @@ class PicoRenderPgetPset : PicoRenderCG {
     
     override
     func pset(x:Double, y:Double, color:Int) {
-        //super.pset(x: x, y: y, color: color)
         let col = Int(x)
         let row = Int(y)
         if (col >= 0 &&
