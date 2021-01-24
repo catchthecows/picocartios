@@ -29,6 +29,7 @@
 		D286D65D25BCCFBA00AC31EE /* Cart7.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D65C25BCCFBA00AC31EE /* Cart7.swift */; };
 		D286D66225BCD1BC00AC31EE /* PicoRenderPgetPset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D66125BCD1BC00AC31EE /* PicoRenderPgetPset.swift */; };
 		D286D66725BD20CE00AC31EE /* Cart8.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D66625BD20CE00AC31EE /* Cart8.swift */; };
+		D286D66C25BD2B4C00AC31EE /* Cart9.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286D66B25BD2B4C00AC31EE /* Cart9.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		D286D65C25BCCFBA00AC31EE /* Cart7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart7.swift; sourceTree = "<group>"; };
 		D286D66125BCD1BC00AC31EE /* PicoRenderPgetPset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicoRenderPgetPset.swift; sourceTree = "<group>"; };
 		D286D66625BD20CE00AC31EE /* Cart8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart8.swift; sourceTree = "<group>"; };
+		D286D66B25BD2B4C00AC31EE /* Cart9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart9.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				D286D65725BCCF1400AC31EE /* Cart6.swift */,
 				D286D65C25BCCFBA00AC31EE /* Cart7.swift */,
 				D286D66625BD20CE00AC31EE /* Cart8.swift */,
+				D286D66B25BD2B4C00AC31EE /* Cart9.swift */,
 			);
 			path = cart;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				D286D63225BCB3F800AC31EE /* Cart.swift in Sources */,
 				D286D66725BD20CE00AC31EE /* Cart8.swift in Sources */,
 				D286D65D25BCCFBA00AC31EE /* Cart7.swift in Sources */,
+				D286D66C25BD2B4C00AC31EE /* Cart9.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

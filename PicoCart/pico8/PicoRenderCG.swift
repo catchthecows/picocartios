@@ -200,7 +200,7 @@ class PicoRenderCG : PicoRender {
     
     func pset(x:Double, y:Double, color:Int) {
         if let context = UIGraphicsGetCurrentContext() {
-            context.addRect(CGRect(x: x, y: y, width: 1, height: 1))
+            context.addRect(CGRect(x: Int(x), y: Int(y), width: 1, height: 1))
             context.setFillColor(_get_color(color: Int(color)).cgColor)
             context.fillPath()
         }
@@ -220,6 +220,10 @@ class PicoRenderCG : PicoRender {
     
     func rnd(_ v : Double = 1.0)->Double {
         return Double.random(in: 0..<v)
+    }
+    
+    func mid(min_value:Double, value:Double, max_value:Double)->Double {
+        return min(max_value, max(min_value, value))
     }
     
 }

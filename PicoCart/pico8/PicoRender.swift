@@ -35,5 +35,7 @@ protocol PicoRender {
     func pal(index: Int, colors:[Int], palette: Int )
     
     func rnd(_ v : Double )->Double
+    
+    func mid(min_value:Double, value:Double, max_value:Double)->Double
 
 }
