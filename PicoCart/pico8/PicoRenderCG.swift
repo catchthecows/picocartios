@@ -3,6 +3,7 @@ import CoreGraphics
 
 class PicoRenderCG : PicoRender {
     private(set) var cart: Cart?
+    private var cart_init = false
     
     init() {
         initPico()
@@ -127,7 +128,12 @@ class PicoRenderCG : PicoRender {
     var _t : Double = 0.0
     func tick() {
         _t += 1.0/60.0
-        cart?.draw()
+        if (!cart_init) {
+            cart?.initCart()
+            cart_init = true
+        } else {
+            cart?.draw()
+        }
     }
     
     func t()->Double {
@@ -226,4 +232,9 @@ class PicoRenderCG : PicoRender {
         return min(max_value, max(min_value, value))
     }
     
+    func sgn(_ v: Double)->Double {
+        return v < 0 ? -1.0 : 1.0
+    }
+    
+    func scrollUp() { }
 }

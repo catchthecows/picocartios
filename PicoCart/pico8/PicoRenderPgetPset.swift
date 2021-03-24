@@ -45,13 +45,35 @@ class PicoRenderPgetPset : PicoRenderCG {
     
     override
     func pset(x:Double, y:Double, color:Int) {
+        let c = (color & 0x8F) % 16
+         
         let col = Int(x)
         let row = Int(y)
         if (col >= 0 &&
                 row >= 0 &&
                 col < PicoRenderPgetPset.SCREEN_SIZE &&
                 row < PicoRenderPgetPset.SCREEN_SIZE) {
-            screen[row*PicoRenderPgetPset.SCREEN_SIZE + col] = color
+            screen[row*PicoRenderPgetPset.SCREEN_SIZE + col] = c
+        }
+    }
+    
+    override
+    func scrollUp() {
+        var c1 = PicoRenderPgetPset.SCREEN_SIZE
+        var c2 = 0
+        var count = screen.count - PicoRenderPgetPset.SCREEN_SIZE
+        while (count > 0) {
+            screen[c2] = screen[c1]
+            c1 += 1
+            c2 += 1
+            count -= 1
+        }
+        count = PicoRenderPgetPset.SCREEN_SIZE
+        c2 = screen.count - 1
+        while (count > 0) {
+            screen[c2] = 0
+            count -= 1
+            c2 -= 1
         }
     }
 }

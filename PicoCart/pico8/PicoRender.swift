@@ -37,5 +37,9 @@ protocol PicoRender {
     func rnd(_ v : Double )->Double
     
     func mid(min_value:Double, value:Double, max_value:Double)->Double
+    
+    func sgn(_ v: Double)->Double
+    
+    func scrollUp()
 
 }

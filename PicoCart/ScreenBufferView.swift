@@ -24,7 +24,7 @@ class ScreenBufferView: UIView {
     
     private func initPico() {
         pico = PicoRenderPgetPset()
-        pico.loadCart(Cart10())
+        pico.loadCart(Cart6())
     }
     
     override func draw(_ rect: CGRect) {
